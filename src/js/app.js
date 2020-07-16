@@ -8,12 +8,10 @@ export default function indication(obj) {
 
   if (obj.health > 50) {
     str = 'healthy';
-  } else if (obj.health > 15 && obj.health <= 50) {
+  } else if (obj.health >= 15 && obj.health <= 50) {
     str = 'wounded';
-  } else if (obj.health <= 15 && obj.health > 0) {
+  } else if (obj.health < 15) {
     str = 'critical';
-  } else if (obj.health <= 0) {
-    str = 'over';
   } else {
     str = 'error';
   }
